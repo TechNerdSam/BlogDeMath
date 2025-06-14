@@ -1,0 +1,628 @@
+/* Variables CSS */
+:root {
+    --primary-color: #0056b3; /* Bleu foncé pour les accents */
+    --secondary-color: #6c757d; /* Gris pour les textes secondaires */
+    --accent-color: #ff8c00; /* Orange pour les éléments interactifs/highlights */
+    --light-bg: #f8f9fa; /* Arrière-plan clair */
+    --dark-text: #212529; /* Texte foncé */
+    --border-color: #dee2e6; /* Couleur de bordure */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Roboto', sans-serif;
+}
+
+/* Réinitialisation de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: var(--dark-text);
+    background-color: var(--light-bg);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+ul {
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+.section-title {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--border-color);
+    display: inline-block;
+    width: 100%;
+}
+
+
+/* Boutons */
+.btn-primary {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color);
+}
+
+.btn-secondary {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+
+/* Header */
+.main-header {
+    background-color: #fff;
+    border-bottom: 1px solid var(--border-color);
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permet le retour à la ligne sur petits écrans */
+}
+
+.logo {
+    font-size: 2em;
+    margin: 0;
+}
+
+.logo a {
+    color: var(--dark-text);
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+.main-nav ul {
+    display: flex;
+}
+
+.main-nav li {
+    margin-left: 25px;
+}
+
+.main-nav a {
+    font-weight: bold;
+    color: var(--dark-text);
+    padding-bottom: 3px;
+    position: relative;
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+    width: 100%;
+}
+
+.search-bar {
+    display: flex;
+    margin-left: 20px;
+}
+
+.search-bar input {
+    border: 1px solid var(--border-color);
+    padding: 8px 12px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    font-size: 0.9em;
+}
+
+.search-bar button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: 1px solid var(--primary-color);
+    padding: 8px 12px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+/* Section Hero */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/1600x600/343a40/ffffff?text=Fonds+Math%C3%A9matiques') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 80px 0;
+    margin-bottom: 40px;
+}
+
+.hero-section h2 {
+    color: #fff;
+    font-size: 3.5em;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Contenu Principal */
+.main-content {
+    flex: 1; /* Permet au contenu de prendre l'espace disponible */
+    display: flex;
+    flex-wrap: wrap; /* Permet à la sidebar de s'empiler */
+    padding-bottom: 40px;
+}
+
+/* Liste d'articles */
+.articles-list {
+    flex: 3; /* Prend plus de place que la sidebar */
+    padding-right: 20px;
+}
+
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.article-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+
+/* Retiré: .article-card img { ... } */
+/* L'image de l'article a été retirée du HTML et du JS, ce style n'est plus nécessaire. */
+
+.article-content {
+    padding: 20px;
+}
+
+.article-content h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.article-content h3 a {
+    color: var(--dark-text);
+}
+
+.article-content h3 a:hover {
+    color: var(--primary-color);
+}
+
+.article-meta {
+    font-size: 0.9em;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.article-card p {
+    margin-bottom: 20px;
+}
+
+.read-more {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.read-more i {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.read-more:hover i {
+    transform: translateX(5px);
+}
+
+.load-more {
+    display: block;
+    width: fit-content;
+    margin: 40px auto 0;
+    padding: 12px 30px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.load-more:hover {
+    background-color: var(--accent-color);
+}
+
+/* Article à la une (featured) - Ajusté pour l'absence d'image */
+.article-card.featured {
+    grid-column: 1 / -1; /* Prend toute la largeur */
+    display: block; /* Changé de flex à block pour un affichage simple */
+    background-color: #f1f7fe; /* Une couleur de fond légèrement différente */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* Retiré: .article-card.featured img { ... } */
+
+.article-card.featured .article-content {
+    width: 100%; /* Prend toute la largeur si pas d'image à côté */
+    padding: 30px;
+}
+
+/* Sidebar */
+.sidebar {
+    flex: 1; /* Prend une part de l'espace */
+    padding-left: 20px;
+    margin-top: 20px; /* Ajouté pour un meilleur espacement sur petits écrans */
+}
+
+.widget {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+.widget h3 {
+    font-size: 1.8em;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: var(--dark-text);
+}
+
+.widget ul {
+    list-style: disc; /* Remettre des puces pour les listes de widgets */
+    padding-left: 20px;
+}
+
+.widget ul li {
+    margin-bottom: 10px;
+}
+
+.widget ul li a {
+    color: var(--dark-text);
+}
+
+.widget ul li a:hover {
+    color: var(--primary-color);
+}
+
+.newsletter form {
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 1em;
+}
+
+.newsletter .btn-primary {
+    align-self: flex-start;
+    padding: 10px 25px;
+}
+
+/* Retiré: .commercial-ad img { ... } */
+/* L'image de la publicité a été retirée du HTML, ce style n'est plus nécessaire. */
+
+
+/* Footer */
+.main-footer {
+    background-color: var(--dark-text);
+    color: #f8f9fa;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.main-footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-links ul {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.footer-links li {
+    margin: 0 15px;
+}
+
+.footer-links a {
+    color: #f8f9fa;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    color: var(--accent-color);
+}
+
+.social-media {
+    margin-bottom: 20px;
+}
+
+.social-media a {
+    color: #f8f9fa;
+    font-size: 1.5em;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: var(--primary-color);
+}
+
+/* Page Article Individuel */
+.article-page-content {
+    flex-direction: row; /* Assure que la sidebar reste à droite */
+}
+
+.article-detail {
+    flex: 3;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    margin-bottom: 40px;
+}
+
+.article-detail h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+/* Retiré: .article-detail-image { ... } */
+/* L'image de l'article a été retirée du HTML et du JS, ce style n'est plus nécessaire. */
+
+.article-body {
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+.article-body p {
+    margin-bottom: 1.5em;
+}
+
+.article-body h3, .article-body h4 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    font-family: var(--font-heading);
+}
+
+/* Pour le code ou les formules mathématiques */
+.article-body pre {
+    background-color: #eee;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin-bottom: 1.5em;
+}
+
+.article-body code {
+    font-family: 'Courier New', monospace;
+    background-color: #e9ecef;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 0.95em;
+}
+
+/* Styles pour MathJax (rendu des formules LaTeX) */
+.article-body .mjx-chtml {
+    display: block !important;
+    text-align: center !important;
+    font-size: 1.2em !important;
+    margin: 20px 0 !important;
+    padding: 10px !important;
+    background-color: #f0f4f7 !important;
+    border-left: 5px solid var(--primary-color) !important;
+    overflow-x: auto !important;
+    /* Important pour override les styles MathJax par défaut si besoin */
+}
+
+
+.article-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.article-navigation .article-nav-btn {
+    display: flex;
+    align-items: center;
+}
+
+.article-navigation .article-nav-btn i {
+    margin: 0 8px;
+}
+
+
+/* Sidebar spécifique à la page article */
+.recent-posts ul {
+    list-style: none; /* Pas de puces ici */
+    padding-left: 0;
+}
+
+.recent-posts li {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.recent-posts li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.recent-posts a {
+    display: block;
+    font-weight: bold;
+    color: var(--dark-text);
+}
+
+.recent-posts span {
+    font-size: 0.85em;
+    color: var(--secondary-color);
+}
+
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .main-header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-nav ul {
+        flex-wrap: wrap;
+        margin-top: 15px;
+    }
+
+    .main-nav li {
+        margin-left: 0;
+        margin-right: 20px;
+        margin-bottom: 10px;
+    }
+
+    .search-bar {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 15px;
+    }
+
+    .main-content {
+        flex-direction: column;
+    }
+
+    .articles-list, .sidebar, .article-detail {
+        padding-right: 0;
+        padding-left: 0;
+        width: 100%;
+    }
+
+    .sidebar {
+        order: -1; /* Pour que la sidebar apparaisse avant les articles sur mobile */
+        margin-bottom: 40px;
+    }
+
+    .article-card.featured {
+        flex-direction: column;
+    }
+
+    /* Retiré: .article-card.featured img, */
+    .article-card.featured .article-content {
+        width: 100%;
+    }
+
+    /* Retiré: .article-card.featured img { ... } */
+}
+
+@media (max-width: 768px) {
+    .hero-section h2 {
+        font-size: 2.5em;
+    }
+
+    .hero-section p {
+        font-size: 1em;
+    }
+
+    .article-grid {
+        grid-template-columns: 1fr; /* Une seule colonne sur petits écrans */
+    }
+
+    .article-detail {
+        padding: 20px;
+    }
+
+    .article-detail h2 {
+        font-size: 1.8em;
+    }
+
+    /* Retiré: .article-detail-image { ... } */
+
+    .article-navigation {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .article-navigation .article-nav-btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - MathInsight</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght=700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="http://googleusercontent.com/image_generation_content/0" type="image/x-icon">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1 class="logo"><a href="index.html">MathInsight</a></h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="index.html#articles">Articles</a></li>
+                    <li><a href="about.html">À Propos</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Rechercher des articles...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content container page-content">
+        <h2 class="section-title">Contactez-nous</h2>
+        <section class="contact-section">
+            <p>Nous serions ravis d'avoir de vos nouvelles ! Que vous ayez des questions, des suggestions d'articles, ou que vous souhaitiez collaborer, n'hésitez pas à nous contacter via le formulaire ci-dessous ou par email.</p>
+
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nom Complet:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Sujet:</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Votre Message:</label>
+                    <textarea id="message" name="message" rows="8" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Envoyer le Message</button>
+            </form>
+
+            <div class="contact-info">
+                <h3>Autres moyens de nous contacter :</h3>
+                <p><i class="fas fa-envelope"></i> Email: <a href="mailto:contact@mathinsight.com">contact@mathinsight.com</a></p>
+                <p><i class="fas fa-phone"></i> Téléphone: +33 1 23 45 67 89 (pour les demandes professionnelles uniquement)</p>
+                <p><i class="fas fa-map-marker-alt"></i> Adresse: 123 Rue de la Logique, 75000 Paris, France</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-links">
+                <ul>
+                    <li><a href="about.html">À Propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Politique de Confidentialité</a></li>
+                </ul>
+            </div>
+            <div class="social-media">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2025 MathInsight. Tous droits réservés.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        // Simple validation de formulaire (pour un vrai site, utiliser un backend)
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Message envoyé ! (Fonctionnalité backend non implémentée)');
+            this.reset(); // Réinitialise le formulaire
+        });
+    </script>
+</body>
+</html>
