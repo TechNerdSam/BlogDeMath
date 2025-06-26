@@ -3,66 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>À Propos - MathInsight</title>
+    <title>À Propos - MathElegant</title>
+    
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght=700&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@600;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="icon" href="http://googleusercontent.com/image_generation_content/0" type="image/x-icon">
+    
+    <link rel="icon" href="path/to/your/new/favicon.ico" type="image/x-icon">
 </head>
 <body>
+
     <header class="main-header">
         <div class="container">
-            <h1 class="logo"><a href="index.html">MathInsight</a></h1>
+            <div class="logo">
+                <a href="index.php">MathElegant</a>
+            </div>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="index.html#articles">Articles</a></li>
+                    <li><a href="index.php">Accueil</a></li>
+                    <li><a href="index.php#articles">Articles</a></li>
                     <li><a href="about.html" class="active">À Propos</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li><a href="dashboard.php">Tableau de Bord</a></li>
                 </ul>
             </nav>
-            <div class="search-bar">
-                <input type="text" placeholder="Rechercher des articles...">
-                <button><i class="fas fa-search"></i></button>
-            </div>
         </div>
     </header>
 
-    <main class="main-content container page-content">
-        <h2 class="section-title">À Propos de MathInsight</h2>
-        <section class="about-section">
-            <p>Bienvenue sur **MathInsight**, votre destination privilégiée pour explorer le monde fascinant des mathématiques. Notre mission est de rendre les concepts mathématiques accessibles, compréhensibles et passionnants pour tous, des étudiants aux professionnels, en passant par les simples curieux.</p>
-            <p>Nous croyons que les mathématiques ne sont pas seulement un ensemble de règles et de formules, mais un langage universel et une science de la beauté et de la logique. À travers des articles approfondis, des explications claires et des exemples pertinents, nous nous efforçons d'illuminer les principes fondamentaux qui régissent notre univers.</p>
-            <h3>Notre Équipe</h3>
-            <p>MathInsight est géré par une équipe de passionnés de mathématiques, d'enseignants et de développeurs qui partagent une vision commune : démystifier les mathématiques. Nous nous engageons à fournir un contenu précis, engageant et de haute qualité.</p>
-            <h3>Notre Engagement</h3>
-            <ul>
-                <li>**Clarté et Précision :** Expliquer des concepts complexes de manière simple et correcte.</li>
-                <li>**Inspiration :** Montrer la pertinence et la beauté des mathématiques dans la vie quotidienne et la recherche.</li>
-                <li>**Communauté :** Créer un espace où chacun peut apprendre, poser des questions et échanger.</li>
-            </ul>
-            <p>Nous vous invitons à explorer nos articles, à laisser des commentaires et à nous rejoindre dans cette aventure mathématique. Pour toute question ou suggestion, n'hésitez pas à nous <a href="contact.html">contacter</a>.</p>
-        </section>
+    <main class="main-content">
+        <div class="page-container container">
+
+            <section class="about-intro">
+                <h1 class="section-title">Notre Histoire</h1>
+                <p class="subtitle">Rendre la beauté des mathématiques accessible à tous.</p>
+                <p class="intro-text">
+                    Bienvenue sur <strong>MathElegant</strong>, votre destination privilégiée pour explorer le monde fascinant des mathématiques. Nous croyons que les maths ne sont pas seulement un ensemble de règles et de formules, mais un langage universel qui allie la rigueur de la logique à la beauté de l'abstraction. Notre mission est de démystifier cette discipline et de la rendre passionnante pour tous, des étudiants aux professionnels, en passant par les simples curieux.
+                </p>
+            </section>
+
+            <section class="about-commitment">
+                <h2 class="sub-section-title">Nos Valeurs Fondamentales</h2>
+                <div class="commitment-cards">
+                    <div class="commitment-card">
+                        <div class="card-icon"><i class="fas fa-lightbulb"></i></div>
+                        <h3>Clarté & Précision</h3>
+                        <p>Nous nous engageons à expliquer des concepts complexes de manière simple, intuitive et toujours correcte.</p>
+                    </div>
+                    <div class="commitment-card">
+                        <div class="card-icon"><i class="fas fa-rocket"></i></div>
+                        <h3>Inspiration</h3>
+                        <p>Notre but est de montrer la pertinence et l'élégance des mathématiques dans le monde qui nous entoure.</p>
+                    </div>
+                    <div class="commitment-card">
+                        <div class="card-icon"><i class="fas fa-users"></i></div>
+                        <h3>Communauté</h3>
+                        <p>Nous aspirons à créer un espace d'échange où chacun peut apprendre, poser des questions et partager sa passion.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about-team">
+                 <h2 class="sub-section-title">Notre Équipe</h2>
+                 <p>MathElegant est le fruit du travail d'une équipe de passionnés, d'enseignants et de développeurs qui partagent une vision commune : révéler la beauté cachée dans les chiffres. Nous mettons notre expertise et notre enthousiasme au service d'un contenu de haute qualité, précis et engageant.</p>
+            </section>
+
+            <section class="about-cta">
+                <h2 class="sub-section-title">Rejoignez l'Aventure</h2>
+                <p>Prêt à explorer l'univers des mathématiques avec nous ?</p>
+                <div class="cta-buttons">
+                    <a href="index.php#articles" class="btn">Voir nos articles</a>
+                    <a href="contact.html" class="btn-secondary">Nous contacter</a>
+                </div>
+            </section>
+
+        </div>
     </main>
 
     <footer class="main-footer">
         <div class="container">
-            <div class="footer-links">
-                <ul>
-                    <li><a href="about.html">À Propos</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="privacy.html">Politique de Confidentialité</a></li>
-                </ul>
-            </div>
             <div class="social-media">
-                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
             </div>
-            <p>&copy; 2025 MathInsight. Tous droits réservés.</p>
+            <p>&copy; 2025 MathElegant. Tous droits réservés.</p>
+            <p><a href="privacy.html">Politique de Confidentialité</a></p>
         </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
