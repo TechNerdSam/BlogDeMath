@@ -1,5 +1,3 @@
-Voici une proposition de documentation `README.md` pour votre projet GitHub, conçue pour être complète, professionnelle et attrayante avec de nombreux émojis, comme vous l'avez demandé.
-
 -----
 
 # 🚀 MathElegant - Un Blog Élégant pour les Passionnés de Mathématiques 🧠
